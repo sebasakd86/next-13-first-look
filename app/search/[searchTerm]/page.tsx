@@ -7,7 +7,7 @@ type Props = {
 };
 
 const Search = async (searchTerm: string) => {
-	const ix = (Math.ceil(Math.random() * 1000) % 10) + 1;
+	const ix = (Math.ceil(Math.random() * 1000) % 20) + 1;
 	const res: SearchResult[] = await new Promise((resolve) => {
 		const i = setInterval(() => {
 			clearInterval(i);
@@ -20,6 +20,7 @@ const Search = async (searchTerm: string) => {
 		}, 2000);
 		return i;
 	});
+	if (ix < 3) throw new Error("Not enough results found");
 	return res;
 };
 

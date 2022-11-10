@@ -20,6 +20,13 @@ const Header = (props: Props) => {
 			>
 				Todos
 			</Link>
+			<Link
+				href="/search/"
+				className="transition-all rounded-3xl p-2 px-6 bg-white text-blue-500 outline-0 outline
+                            hover:outline-2 hover:outline-black "
+			>
+				Search
+			</Link>
 		</header>
 	);
 };

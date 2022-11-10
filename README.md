@@ -10,10 +10,10 @@ Every component / page inside the app folder is by default a [Server Component](
 
 Right now, a client component is need when it requires:
 
-- State
-- Event Listeners
-- Custom Hooks
-- Browser Only API
+-   State
+-   Event Listeners
+-   Custom Hooks
+-   Browser Only API
 
 ## Pages and Layouts
 
@@ -47,3 +47,7 @@ As described [here](https://beta.nextjs.org/docs/api-reference/generate-static-p
 As described [here](https://beta.nextjs.org/docs/upgrade-guide#replacing-fallback), you would have to use
 
 > With dynamicParams set to true (the default), when a route segment is requested that hasn't been generated, it will be server-rendered and cached as static data on success
+
+### Error Handling
+
+Added the default / suggested / current next error component to deal with error using the new routing properties, as described [here](https://beta.nextjs.org/docs/routing/error-handling)
