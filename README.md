@@ -6,6 +6,10 @@ Will have a look at some of the Next13 beta features to start upgrading.
 
 Every component / page inside the app folder is by default a [Server Component](https://nextjs.org/docs/advanced-features/react-18/server-components)
 
+## Pages and Layouts
+
+Now routing looks a lil bit different as [stated here](https://beta.nextjs.org/docs/routing/pages-and-layouts#layouts), but basically the layout renders the children from that entire leaf
+
 ## Fetch
 
 It's been somewhat upgraded to support SSR and ISG as [explained here](https://nextjs.org/blog/next-13#data-fetching)
