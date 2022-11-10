@@ -1,4 +1,4 @@
-# Next 13 First Look
+# [Next 13](https://beta.nextjs.org/) First Look
 
 Will have a look at some of the Next13 beta features to start upgrading.
 
