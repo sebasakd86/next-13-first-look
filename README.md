@@ -6,6 +6,15 @@ Will have a look at some of the Next13 beta features to start upgrading.
 
 Every component / page inside the app folder is by default a [Server Component](https://nextjs.org/docs/advanced-features/react-18/server-components)
 
+[Here](https://beta.nextjs.org/docs/rendering/server-and-client-components) is the overall idea as of right now on how and why this difference has been made, also when and why using one component in favor of the other is a good idea.
+
+Right now, a client component is need when it requires:
+
+- State
+- Event Listeners
+- Custom Hooks
+- Browser Only API
+
 ## Pages and Layouts
 
 Now routing looks a lil bit different as [stated here](https://beta.nextjs.org/docs/routing/pages-and-layouts#layouts), but basically the layout renders the children from that entire leaf
