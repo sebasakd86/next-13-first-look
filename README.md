@@ -28,3 +28,9 @@ fetch(URL, { next: { revalidate: 10 } });
 ## Generate Static Params
 
 As described [here](https://beta.nextjs.org/docs/api-reference/generate-static-params) this is the updated getStaticPaths
+
+### Fallback
+
+As described [here](https://beta.nextjs.org/docs/upgrade-guide#replacing-fallback), you would have to use
+
+> With dynamicParams set to true (the default), when a route segment is requested that hasn't been generated, it will be server-rendered and cached as static data on success

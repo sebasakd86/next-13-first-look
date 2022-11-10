@@ -1,4 +1,7 @@
 import React from "react";
+import { notFound } from "next/navigation";
+
+export const dynamicParams = true;
 
 type Props = {
 	params: {
@@ -21,7 +24,12 @@ const TodoPage = async (props: Props) => {
 	const {
 		params: { id },
 	} = props;
-	const { title, completed, userId } = await fetchTodo(id);
+	const todo = await fetchTodo(id);
+
+	if (!todo.id) return notFound();
+
+	const { title, completed, userId } = todo;
+
 	return (
 		<div className="bg-yellow-500 p-5 shadow-xl m-5">
 			<p className="font-bold">{title}</p>
