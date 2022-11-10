@@ -12,11 +12,12 @@ const TodoPage = async (props: Props) => {
 	const {
 		params: { id },
 	} = props;
-	const todo = await fetchTodo(id);
+	const { title, completed, userId } = await fetchTodo(id);
 	return (
-		<div>
-			<p>TodoPage - {id}</p>
-			<p>{JSON.stringify(todo)}</p>
+		<div className="bg-yellow-500 p-5 shadow-xl m-5">
+			<p className="font-bold">{title}</p>
+			{completed && <p className="font-bold underline">Completed</p>}
+			<p>User: {userId}</p>
 		</div>
 	);
 };
