@@ -8,10 +8,18 @@ type Props = {
 
 const Search = async (searchTerm: string) => {
 	const ix = (Math.ceil(Math.random() * 1000) % 10) + 1;
-	const res: SearchResult[] = Array.from({ length: ix }).map((e, ix) => ({
-		id: ix,
-		text: `${searchTerm}-${ix}`,
-	}));
+	const res: SearchResult[] = await new Promise((resolve) => {
+		const i = setInterval(() => {
+			clearInterval(i);
+			resolve(
+				Array.from({ length: ix }).map((e, ix) => ({
+					id: ix,
+					text: `${searchTerm}-${ix}`,
+				}))
+			);
+		}, 2000);
+		return i;
+	});
 	return res;
 };
 
