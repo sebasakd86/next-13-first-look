@@ -7,7 +7,7 @@ const fetchTodos = async () => {
 	// This happens on the server
 	const res = await fetch("https://jsonplaceholder.typicode.com/todos");
 	const todos: Todo[] = await res.json();
-	return todos;
+	return todos.splice(0, 5);
 };
 
 const TodoList = async (props: Props) => {

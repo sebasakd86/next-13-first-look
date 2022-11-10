@@ -24,3 +24,7 @@ fetch(URL, { cache: 'no-store' });
 // Similar to `getStaticProps` with the `revalidate` option.
 fetch(URL, { next: { revalidate: 10 } });
 ```
+
+## Generate Static Params
+
+As described [here](https://beta.nextjs.org/docs/api-reference/generate-static-params) this is the updated getStaticPaths

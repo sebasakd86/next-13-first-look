@@ -28,3 +28,13 @@ const TodoPage = async (props: Props) => {
 };
 
 export default TodoPage;
+
+// Basically GetStaticPaths
+export const generateStaticParams = async () => {
+	const res = await fetch(`https://jsonplaceholder.typicode.com/todos`);
+	const ret: Todo[] = await res.json();
+	// Name of the folder
+	return ret.splice(0, 5).map((t) => ({
+		id: t.id.toString(), // ! Has to be a string.
+	}));
+};
