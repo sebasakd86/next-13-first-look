@@ -1,6 +1,10 @@
 import React from "react";
 
-type Props = {};
+type Props = {
+	params: {
+		id: number;
+	};
+};
 
 const fetchTodo = async (id: number) => {
 	const res = await fetch(
