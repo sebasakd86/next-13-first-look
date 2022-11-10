@@ -4,3 +4,7 @@ interface Todo {
 	title: string;
 	completed: boolean;
 }
+interface SearchResult {
+	id: number;
+	text: string;
+}
