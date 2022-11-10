@@ -1,11 +1,15 @@
-import React from 'react'
+import React from "react";
+import TodoList from "./todoList";
 
-type Props = {}
+type Props = {};
 
 const Todos = (props: Props) => {
-  return (
-    <div>Todos</div>
-  )
-}
+	return (
+		<div>
+			<p>Todos</p>
+			<TodoList />
+		</div>
+	);
+};
 
-export default Todos
+export default Todos;
