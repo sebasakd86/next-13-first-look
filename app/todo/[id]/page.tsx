@@ -3,7 +3,12 @@ import React from "react";
 type Props = {};
 
 const fetchTodo = async (id: number) => {
-	const res = await fetch(`https://jsonplaceholder.typicode.com/todos/${id}`);
+	const res = await fetch(
+		`https://jsonplaceholder.typicode.com/todos/${id}`,
+		{
+			next: { revalidate: 600 },
+		}
+	);
 	const ret: Todo = await res.json();
 	return ret;
 };
