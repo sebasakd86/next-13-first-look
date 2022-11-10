@@ -4,6 +4,7 @@ import React from "react";
 type Props = {};
 
 const fetchTodos = async () => {
+	// This happens on the server
 	const res = await fetch("https://jsonplaceholder.typicode.com/todos");
 	const todos: Todo[] = await res.json();
 	return todos;
@@ -11,12 +12,12 @@ const fetchTodos = async () => {
 
 const TodoList = async (props: Props) => {
 	const todos = await fetchTodos();
-	console.log(todos);
+	// console.log(todos);
 	return (
 		<div>
 			{todos.map((t, ix) => (
 				<p key={ix}>
-					<Link href={`/todos/${t.id}`}>Todo: {t.id}</Link>
+					<Link href={`/todo/${t.id}`}>Todo: {t.id}</Link>
 				</p>
 			))}
 		</div>
