@@ -1,4 +1,5 @@
 import "../styles/globals.css";
+import Header from "./header";
 
 type Props = {
 	children: React.ReactNode;
@@ -8,7 +9,10 @@ const RootLayout = ({ children }: Props) => {
 	return (
 		<html>
 			<head></head>
-			<body>{children}</body>
+			<body>
+				<Header />
+				{children}
+			</body>
 		</html>
 	);
 };
